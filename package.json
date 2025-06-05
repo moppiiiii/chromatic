@@ -13,7 +13,7 @@
     "build-storybook:catalog": "storybook build -o storybook-static",
     "build-storybook:vrt": "cross-env-shell STORYBOOK_TARGET=vrt storybook build -o storybook-static-vrt",
     "chromatic:catalog": "cross-env-shell CHROMATIC_PROJECT_TOKEN=$CHROMATIC_CATALOG_TOKEN chromatic --build-script-name build-storybook:catalog --skip --exit-once-uploaded",
-    "chromatic:vrt": "cross-env CHROMATIC_PROJECT_TOKEN=$CHROMATIC_VRT_TOKEN chromatic --build-script-name build-storybook:vrt",
+    "chromatic:vrt": "cross-env-shell CHROMATIC_PROJECT_TOKEN=$CHROMATIC_VRT_TOKEN chromatic --build-script-name build-storybook:vrt",
     "chromatic": "npx chromatic --project-token=chpt_49f2e8e23ee512b"
   },
   "dependencies": {
