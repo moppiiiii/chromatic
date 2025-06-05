@@ -10,10 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook:catalog": "storybook build -o storybook-static",
-    "build-storybook:vrt": "cross-env-shell STORYBOOK_TARGET=vrt storybook build -o storybook-static-vrt",
-    "chromatic:catalog": "cross-env-shell CHROMATIC_PROJECT_TOKEN=$CHROMATIC_CATALOG_TOKEN chromatic --build-script-name build-storybook:catalog --skip --exit-once-uploaded",
-    "chromatic:vrt": "cross-env-shell CHROMATIC_PROJECT_TOKEN=$CHROMATIC_VRT_TOKEN chromatic --build-script-name build-storybook:vrt",
+    "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_49f2e8e23ee512b"
   },
   "dependencies": {
