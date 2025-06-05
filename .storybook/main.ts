@@ -1,10 +1,11 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 
+const isVRT = process.env.STORYBOOK_TARGET === 'vrt';
+
 const config: StorybookConfig = {
-  "stories": [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
-  ],
+  "stories": isVRT
+  ? ['../src/**/*.vrt.stories.@(ts|tsx|js|jsx)']
+  : ['../src/**/!(*.vrt).stories.@(ts|tsx|js|jsx)'],
   "addons": [
     "@storybook/addon-onboarding",
     "@chromatic-com/storybook",
