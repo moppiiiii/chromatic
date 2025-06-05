@@ -30,4 +30,4 @@ jobs:
       - name: Run Chromatic VRT
         run: pnpm chromatic:vrt
         env:
-          CHROMATIC_VRT_TOKEN: ${{ secrets.CHROMATIC_VRT_TOKEN }}
+          CHROMATIC_VRT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

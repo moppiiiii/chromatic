@@ -30,4 +30,4 @@ jobs:
       - name: Run Chromatic Storybook Publish
         run: pnpm chromatic:catalog
         env:
-          CHROMATIC_CATALOG_TOKEN: ${{ secrets.CHROMATIC_CATALOG_TOKEN }}
+          CHROMATIC_CATALOG_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
