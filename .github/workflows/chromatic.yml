@@ -2,13 +2,14 @@ name: "Chromatic"
 
 on:
   pull_request:
+    branches-ignore:
+      - "renovate/*"
+      - "dependabot/*"
+      - "chore/*"
+      - "docs/*"
   push:
     branches:
-      - main
-    branches-ignore:
-      - 'renovate/**'
-      - 'chore/**'
-      - 'docs/**'
+      - "main"
 
 jobs:
   chromatic:
