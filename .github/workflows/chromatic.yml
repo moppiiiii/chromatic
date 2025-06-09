@@ -2,11 +2,11 @@ name: "Chromatic"
 
 on:
   pull_request:
-    branches-ignore:
-      - "renovate/**"
-      - "dependabot/**"
-      - "chore/**"
-      - "docs/**"
+    branches:
+      - "!renovate/**"
+      - "!dependabot/**"
+      - "!chore/**"
+      - "!docs/**"
   push:
     branches:
       - "main"

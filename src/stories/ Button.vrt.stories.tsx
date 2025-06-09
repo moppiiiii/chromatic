@@ -80,7 +80,6 @@ export const Buttons: Story = {
       <Button {...args} label="Primary" />
       <Button {...args} label="Secondary" />
       <Button {...args} label="Large" />
-      <Button {...args} label="Small" />
     </div>
   ),
   args: {
