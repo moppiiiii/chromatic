@@ -2,17 +2,20 @@ name: "Chromatic"
 
 on:
   pull_request:
-    branches:
-      - '!renovate/**'
-      - '!dependabot/**'
-      - '!chore/**'
-      - '!docs/**'
   push:
     branches:
       - "main"
 
 jobs:
   chromatic:
+    if: |
+      github.event_name == 'push' || (
+        github.event_name == 'pull_request' &&
+        !startsWith(github.head_ref, 'renovate/') &&
+        !startsWith(github.head_ref, 'dependabot/') &&
+        !startsWith(github.head_ref, 'chore/') &&
+        !startsWith(github.head_ref, 'docs/')
+      )
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
