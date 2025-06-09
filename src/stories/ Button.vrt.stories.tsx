@@ -79,7 +79,7 @@ export const Buttons: Story = {
       <Button {...args} label="Small" />
       <Button {...args} label="Primary" />
       <Button {...args} label="Secondary" />
-      <Button {...args} label="Large" />
+      {/* <Button {...args} label="Large" /> */}
     </div>
   ),
   args: {
